@@ -34,7 +34,7 @@ def phatsinh_dinhthuc(n):
     dinhthuc = ""
     for sn in Sn:
             sigma = np.array([1])
-            sigma.resize([n])
+            sigma = np.resize(sigma, n)
             product = ""
             for i in range(1,n+1):
                 sigma[sn.index(i)] = i
@@ -49,7 +49,7 @@ def phatsinh_dinhthuc(n):
 print(phatsinh_dinhthuc(2))
 print(phatsinh_dinhthuc(3))
 
-def phatsinh_dinhthuc(A):
+def tinhtoan_dinhthuc(A):
     X = []
     import math
     n = int(math.sqrt(A.size))
@@ -59,7 +59,7 @@ def phatsinh_dinhthuc(A):
     dinhthuc = 0
     for sn in Sn:
             sigma = np.array([1])
-            sigma.resize([n])
+            sigma= np.resize(sigma , n)
             product = 1
             for i in range(1,n+1):
                 sigma[sn.index(i)] = i
@@ -70,7 +70,7 @@ def phatsinh_dinhthuc(A):
                 product = product * (-1)
                 dinhthuc =dinhthuc+product
     return dinhthuc
-matran = np.array([[3,5,-8],[4,12,-1],[2,5,3]])
+A = np.array([[3,5,-8],[4,12,-1],[2,5,3]])
 print(tinhtoan_dinhthuc(A))
 
 
